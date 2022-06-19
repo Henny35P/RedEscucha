@@ -17,7 +17,7 @@ return new class extends Migration
             $table->id();
             $table->string('comentario');
             $table->timestamps();
-            $table->integer('id_user');
+            $table->integer('id_user')->nullable();
             $table->foreign('id_user')->references('id')->on('users');
             $table->softDeletes();
         });

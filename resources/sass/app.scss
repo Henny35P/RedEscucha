@@ -4,5 +4,16 @@
 // Variables
 @import 'variables';
 
+.micolor {
+    background-color: $RDprimary;
+}
+.colorFuente{
+    color: $RDprimary;
+}
+.shadowing{
+text-shadow: 2px 2px #000000;
+}
 // Bootstrap
 @import '~bootstrap/scss/bootstrap';
+
+

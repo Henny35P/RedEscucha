@@ -45,8 +45,8 @@ class CommentController extends Controller
         $validator = Validator::make(
             $request->all(),
             [
-                'comentario' => 'required|min:2|max:50',
-                'id_user' => 'required'
+                'comentario' => 'required|min:4|max:50',
+                'id_user' => ''
 
             ],
             [
@@ -62,10 +62,7 @@ class CommentController extends Controller
         $comments->comentario = $request->comentario;
         $comments->id_user = $request->id_user;
         $comments->save();
-        return response()->json([
-            'respuesta' => 'Se ha creado un nuevo comentario',
-            'id' => $comments->id
-        ], 201);
+        return view('feedbackRespuesta');
     }
 
     /**

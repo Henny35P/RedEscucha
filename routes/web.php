@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use Illuminate\Support\Facades\Auth;
 use App\Http\Controllers\CommentController;
 use App\Http\Controllers\UserController;
 /*
@@ -18,6 +18,19 @@ use App\Http\Controllers\UserController;
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/bienvenido', function () {
+    return view('bienvenido');
+});
+
+Route::get('/reclamos', function () {
+    return view('reclamos');
+});
+
+Route::get('/feedbackRespuesta', function () {
+    return view('feedbackRespuesta');
+});
+
 Route::get('/users', [UserController::class, 'index']);
 Route::get('/users/{id}', [UserController::class, 'show']);
 Route::post('/users/create', [UserController::class, 'store']);
@@ -33,4 +46,5 @@ Route::delete('/comments/delete/{id}', [CommentController::class, 'destroy']);
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::resource('comments', CommentController::class);
 
