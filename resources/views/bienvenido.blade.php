@@ -9,7 +9,7 @@
 </head>
 <body class="micolor">
     <div class="d-flex mx-auto gap-5 w-50 justify-content-center" style="max-width: 600px " >
-        <img src="{{URL::asset('/image/redescucha.png')}}" class="img-fluid" alt="...">
+        <img src="{{URL::asset('/image/redescuchalogo.png')}}" class="img-fluid" alt="...">
     </div>
     <div class="d-grid gap-5 mx-auto w-50">
         <a class="btn btn-primary btn-lg rounded-pill btn-warning link-dark" href="reclamos" role="button">Ingresa tus reclamos y sugerencias</a>
